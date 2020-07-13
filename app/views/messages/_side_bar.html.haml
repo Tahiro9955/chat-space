@@ -1,0 +1,14 @@
+.Chatside
+  .Chatside__header
+    .Chatside__header__nameicon
+      .Chatside__header__nameicon__username masa
+      .Chatside__header__nameicon__iconbox
+        = link_to "#", class: "Chatside__header__nameicon__iconbox__btn" do
+          = icon('far', 'edit', class: "Chatside__header__nameicon__iconbox__btn--edit")
+        = link_to "#", class: "Chatside__header__nameicon__iconbox__btn" do
+          = icon('fa', 'cog', class: "Chatside__header__nameicon__iconbox__btn--cog")
+
+  .Chatside__box
+    .Chatside__box__groupbox
+      .Chatside__box__groupbox__groupname techcamp
+      .Chatside__box__groupbox__topmessage まだメッセージがありません
