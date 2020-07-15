@@ -4,12 +4,16 @@
       .Chatside__header__nameicon__username 
         = current_user.name
       .Chatside__header__nameicon__iconbox
-        = link_to "#", class: "Chatside__header__nameicon__iconbox__btn" do
+        = link_to new_group_path(current_user), class: "Chatside__header__nameicon__iconbox__btn" do
           = icon('far', 'edit', class: "Chatside__header__nameicon__iconbox__btn--edit")
         = link_to edit_user_path(current_user), class: "Chatside__header__nameicon__iconbox__btn"  do
           = icon('fa', 'cog', class: "Chatside__header__nameicon__iconbox__btn--cog")
 
   .Chatside__box
-    .Chatside__box__groupbox
-      .Chatside__box__groupbox__groupname techcamp
-      .Chatside__box__groupbox__topmessage まだメッセージがありません
+    - current_user.groups.each do |group|
+      .Chatside__box__groupbox
+        = link_to '#' do
+          .Chatside__box__groupbox__groupname 
+            = group.name
+          .Chatside__box__groupbox__topmessage 
+            まだメッセージがありません
