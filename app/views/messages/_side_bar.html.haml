@@ -8,12 +8,11 @@
           = icon('far', 'edit', class: "Chatside__header__nameicon__iconbox__btn--edit")
         = link_to edit_user_path(current_user), class: "Chatside__header__nameicon__iconbox__btn"  do
           = icon('fa', 'cog', class: "Chatside__header__nameicon__iconbox__btn--cog")
-
   .Chatside__box
     - current_user.groups.each do |group|
       .Chatside__box__groupbox
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .Chatside__box__groupbox__groupname 
             = group.name
           .Chatside__box__groupbox__topmessage 
-            まだメッセージがありません
+            = group.show_last_message
