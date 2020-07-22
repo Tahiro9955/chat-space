@@ -65,5 +65,3 @@ $(function(){
     
   });
 });
-
-//prop() attr()
