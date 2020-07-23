@@ -9,8 +9,7 @@
           - @group.users.each do |user|
             = user.name 
     .Chatmain__header__editbox
-      = link_to 'Edit',edit_group_path(current_user), class: "Chatmain__header__editbox__editbtn"
-     
+      = link_to 'Edit',edit_group_path(current_user), class: "Chatmain__header__editbox__editbtn"   
   .Chatmain__box
     = render @messages
   .Chatmain__form
